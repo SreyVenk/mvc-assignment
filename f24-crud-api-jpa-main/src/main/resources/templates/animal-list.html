@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal List</title>
+</head>
+<body>
+<h1>Animal List</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Actions</th>
+    </tr>
+    <tr th:each="animal : ${animalList}">
+        <td th:text="${animal.animalId}"></td>
+        <td th:text="${animal.name}"></td>
+        <td>
+            <a th:href="@{/animals/{id}(id=${animal.animalId})}">View</a>
+            <a th:href="@{/animals/update/{id}(id=${animal.animalId})}">Edit</a>
+            <a th:href="@{/animals/delete/{id}(id=${animal.animalId})}">Delete</a>
+        </td>
+    </tr>
+</table>
+<!-- Hardcoded link to the animal-create.html file -->
+<a href="animal-create.html">Create New Animal</a>
+<!-- Hardcoded link to the animal-details.html file -->
+<a href="animal-details.html?id=1">View Sample Animal</a>
+</body>
+</html>

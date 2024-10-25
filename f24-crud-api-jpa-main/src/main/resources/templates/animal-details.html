@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Animal Details</title>
+</head>
+<body>
+<h1 data-th-text="${animal.name}">Sample Animal Name</h1>
+<p><strong>Scientific Name:</strong> <span data-th-text="${animal.scientificName}">Sample Scientific Name</span></p>
+<p><strong>Species:</strong> <span data-th-text="${animal.species}">Sample Species</span></p>
+<p><strong>Habitat:</strong> <span data-th-text="${animal.habitat}">Sample Habitat</span></p>
+<p><strong>Description:</strong> <span data-th-text="${animal.description}">Sample Description</span></p>
+
+<!-- Hardcoded link back to animal list -->
+<a href="animal-list.html">Back to Animal List</a>
+<!-- Hardcoded link to the animal-update.html file -->
+<a href="animal-update.html?id=1">Edit Animal</a>
+</body>
+</html>
